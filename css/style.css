@@ -1,0 +1,560 @@
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    background-color: #fff; 
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    height: 100%;
+    color: #223A59;
+}
+
+main {
+    margin: 3em;
+}
+
+.background-color {
+    background: linear-gradient(#035AA6,#657D9A);
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    box-shadow: 2px 2px 10px 2px rgb(209, 209, 209);
+}
+
+/* standard formatting -- all pages */
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: .5em;
+    margin-top: 1em;
+}
+
+
+h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-bottom: .5em;
+}
+
+h3 {
+    font-size: 1em;
+    line-height: 1.15;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+h4 {
+    line-height: 1.15;
+    margin-bottom: .5em;
+    font-size: 1em;
+}
+
+p {
+    line-height: 1.15;
+    margin-bottom: 1em;
+}
+
+ul, li {
+    line-height: 1.5;
+    margin-left: 1em;
+}
+
+*:focus {
+    border: 2px solid;
+}
+
+:focus {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar-light .navbar-brand {
+    color: #223A59;
+    margin-left: .5em;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+    color: #035AA6;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #223A59;
+}
+
+
+
+/* fix */
+.navbar-light .navbar-brand:hover {
+    color: #223A59;
+    margin-left: .5em;
+}
+.navbar-light .navbar-nav:hover {
+    color: #223A59;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+/* ^^^ */
+
+
+
+/* fixed pic issue vv */
+img {
+    max-width: 100%;
+    object-fit: inherit;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    background-color: transparent;
+    color: #223A59;
+    font-size: .75em;
+    margin-top: 1em;
+}
+
+.main-icons {
+    margin: 1em;
+}
+
+/* end standard formatting -- all pages */
+
+
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
+
+
+
+
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+}
+
+
+
+
+/* Home page */ 
+
+.container p {
+    margin: .75em auto;
+}
+
+.container { 
+    margin-bottom: 3em;
+}
+
+.container h2 {
+    margin-top: 2em;
+    margin-bottom: 1.25em;
+}
+/* end home */
+
+
+
+/* Work page */
+
+.work_page {
+    margin: 2em;
+}
+
+.job {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.job-info {
+    text-align: center;
+}
+
+.job-dates {
+    font-size: .75em;
+}
+
+.job img {
+    width: 30%;
+}
+
+/* end work */
+
+/* Project page */
+
+.proj-header{
+    text-align: center;
+}
+
+/* .proj-header img{
+    width: 75%;
+    margin: 0;
+    margin-bottom: 1em;
+} */
+
+.proj-desc {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+.span-1 {
+    width: 90%;
+    margin: auto;
+}
+
+.span-2 {
+    width: 90%;
+    margin: auto;
+    /* margin-left: 40px; */
+}
+
+.span-3 {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.italic {
+    font-style: italic;
+}
+
+
+/* Project pages -- standard styling */
+
+.proj-main{
+    margin-top: 3.5em;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.proj-section {
+    margin: 3em 0;
+    /* margin-bottom: 2em; */
+}
+
+.proj-section img {
+    margin: 2em 0;
+    /* doesn't center */
+}
+
+/* .proj-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+} */
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0px 30px 0px;
+}
+
+.project img{
+    width: 40%;
+}
+
+.proj-info {
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.proj-summary {
+    margin-bottom: 2em;
+}
+
+
+a.proj-button {
+    border-radius: 50px;
+    color: #FFFFFF !important; 
+    background: #035AA6;
+    box-shadow: #035AA6 0 10px 10px -10px;
+    font-weight: 700;
+    line-height: 24px;
+
+    padding: 10px 20px;
+    border: 0;
+    width: fit-content;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+
+    cursor: pointer;
+    touch-action: manipulation;
+
+    word-break: break-word;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.proj-button:hover{
+    background: #223A59;
+}
+
+.button-flex {
+    margin-bottom: 2em;
+}
+
+.takeaways {
+    margin-bottom: 10px;
+}
+
+
+/* 422 Navigation project page */
+
+.d-block{
+    /* height: 8em;
+    width: auto; */
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-item{
+    text-align: center;
+    text-align: -webkit-center;
+}
+
+.carousel-indicators {
+    margin-top: 4em;
+    margin-bottom: 0px;
+}
+
+
+
+/* 320 Art works page */
+
+.work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.work-info {
+    text-align: center;
+}
+
+.work-software {
+    font-size: .75em;
+}
+
+.work img {
+    width: 30%;
+}
+
+#khourabia {
+    margin-top: 1em;
+}
+
+#soups {
+    width: 85%;
+}
+
+#damascus {
+    width: 60%;
+}
+
+/* 422 Heuristics Page */
+
+.heuristic {
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+ol {
+    margin-left: 1em;
+    line-height: 1.1;
+}
+
+.issue-image {
+    margin: auto;
+    text-align: center;
+    width: 65%;
+}
+
+.issue-image p {
+    font-size: .75em;
+    /* text-align: center; */
+    margin-bottom: 2em;
+}
+
+.issue-image video {
+    width: 70%;
+}
+
+
+
+/* fixing button issue on mobile (i hope) */
+@media screen and (max-width: 443px) {
+
+    .button-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
+
+/* TABLET view */
+@media screen and (min-width: 760px) {
+
+    /* Work page */
+    .job {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .job-info{
+        text-align: left;
+        width: 50%;
+        margin-left: .5em;
+    }
+    
+    .job img {
+        width: 20%;
+        margin-right: 1em;
+    }
+
+    /* Projects page */
+    .project {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .proj-info{
+        /* text-align: left; */
+        width: 80%;
+    }
+    
+    .proj img {
+        width: 20%;
+        margin-right: 1em;
+    }
+
+    /* 320 Page */
+    .work {
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; */
+    }
+    
+    .work-info{
+        text-align: left;
+        width: 50%;
+        margin-left: .5em;
+    }
+    
+    .work img {
+        width: 20%;
+        margin-right: 1em;
+    }
+
+    #khourabia {
+        margin-right: 2em;
+    }
+    
+    #soups {
+        width: 40%;
+    }
+    
+    #damascus {
+        width: 25%;
+    }
+    
+    #khourabia, #soups, #damascus {
+        margin-left: 2em;
+    }
+
+}
+
+
+
+/* DESKTOP view */
+@media screen and (min-width: 1000px) {
+
+    nav {
+        display: flex;
+        width: auto;
+        justify-content: flex-end;
+        flex-direction: row;
+        background-color: transparent;
+    }
+
+    nav a {
+        padding: 1em;
+    }
+
+}
+
+
+
+/* 
+portfolio color schemes
+
+new:
+#223A59 navy ish
+#035AA6 ocean blue
+#5094CB lighter blue
+#657D9A med grey
+#8BB8D8 lightest blue
+
+old:
+#5da2d5 mid blue
+#215583 darker blue
+#eefbfb very pale blue 
+*/

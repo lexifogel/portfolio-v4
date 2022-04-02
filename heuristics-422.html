@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="shortcut icon" type="image/png" href="images/LF.jpg"/>
+
+    <script src="https://use.fontawesome.com/f9c76c7132.js"></script>
+    <title>Lexi Fogel</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+          <a class="navbar-brand" href="index.html">Lexi Fogel</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="work.html">Work</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="projects.html">Projects <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="files/resume.pdf" target="_blank">Resume</a>
+                </li>
+            </ul>
+          </div>
+        </nav>
+    </header>       
+
+    <main>
+
+        <div class="proj-header">
+            <h1>Craigslist: Identifying Usability Issues</h1>
+            <div class="proj-desc">
+               <div class="span-2">
+                 <p><span class="bold">Project description: </span>
+                    This project challenged my team to diagnose all observable usability problems with 
+                    Craigslist. Then, we classified these issues and prioritied which should be fixed 
+                    first to help define clear next steps for the company.</p>
+               </div>
+               <div class="span-3">
+                    <p><span class="bold">Problem: </span>Major usability problems prevent Craigslist from 
+                    seeing its potential success</p>
+                    <p><span class="bold">Goal: </span>Evaluate problems for severity and establish a 
+                    plan of action for bettering customers' experiences on the site</p>
+                    <p><span class="bold">Process: </span>Heuristic Evaluation</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="proj-main">
+
+            <div class="proj-section">
+               <h2>Process</h2>
+               <p>The first step of this evaluation was to perform a variety of actions on the site and 
+                identify any usability issues we noticed. Next, we went through these problems one by one 
+                and determined which of <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">
+                    Nielson's Heuristics</a> they represented. Finally, we assigned each problem a 
+                severity rating according to <a href="https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/">
+                    this scale</a> to determine in what order they should be approached in the redesign 
+                    process.
+               </p>
+               <p>The issues were ranked from most severe to least severe, according to the following scale:
+                <ol>
+                    <li>Cosmetic problem</li>
+                    <li>Minor usability problem</li>
+                    <li>Major usability problem; important to fix</li>
+                    <li>Usability catastrophe; imperative to fix</li>
+                </ol>
+            </div>
+
+            <div class="proj-section">
+                <h2>Key Findings from Heuristic Evaluation</h2>
+
+                    <div class="heuristic">
+                        <h3>Usability issue #1: Location limitations</h3>
+                        <p>Craigslist does not remember where I chose my location to be last, 
+                            so I have to go through the entire list and find it. Also, it 
+                            should indicate that it doesn’t know where you are (rather than 
+                            guessing), and give users the option to find their region manually.
+                        </p>
+                        <ul>
+                            <li><span class="bold">Heuristic(s) violated: </span>Recognition 
+                                rather than recall, Visibility of system status</li>
+                            <li><span class="bold">Severity rating: </span>3</li>
+                        </ul>
+                        <div class="issue-image">
+                            <!-- <img src="" alt=""> -->
+                            <video controls name="Wrong location">
+                                <source src="images/si-422/wrong-location.mov">
+                              </video>
+                            <p>Figure 1: Wrong location (I'm in Ann Arbor!)</p>
+                        </div>
+                        <p>On the Craigslist world map page there is no search bar capability 
+                            to easily find your location; they give you a premade list of locations.
+                        </p>
+                        <ul>
+                            <li><span class="bold">Heuristic(s) violated: </span>User control 
+                                and freedom</li>
+                            <li><span class="bold">Severity rating: </span>2</li>
+                        </ul>
+                        <div class="issue-image">
+                            <img src="images/si-422/location-list.png" alt="Predetermined location options">
+                            <p>Figure 2: Location list</p>
+                        </div>
+                    </div>
+
+                    <div class="heuristic">   
+                        <h3>Usability issue #2: Title Shorthands</h3>
+                        <p> Many category names are shortened in non-intuitive ways 
+                            (for example: health > <span class="italic">hlth, </span>
+                            business development > <span class="italic">biz dev, </span> 
+                            <!-- ? > <span class="italic">qa, </span> -->
+                            hospitality > <span class="italic">hosp, </span> 
+                            translation > <span class="italic">tran</span>)
+                        </p>
+                        <p>Users cannot efficiently navigate to categories if they 
+                            don’t understand how they are labeled! If I was looking 
+                            for an editorial or translator job, “write/ed/tran” would 
+                            not stand out to me as the correct category (if not for write”, 
+                            I wouldn’t guess that one at all).
+                        </p>
+                        <ul>
+                            <li><span class="bold">Heuristic(s) violated: </span>Consistency 
+                                and standards</li>
+                            <li><span class="bold">Severity rating: </span>3</li>
+                        </ul>   
+                        <div class="issue-image">
+                            <img src="images/si-422/bad-shorthands.png" alt="Bad shorthands">
+                            <p>Figure 3: Poor shorthands</p>
+                        </div>      
+                    </div>
+
+                    <div class="heuristic">
+                        <h3>Usability issue #3: Page style</h3>
+                        <p>It is hard to know where to go when there are 
+                            so many words on the main page distracting the user. 
+                            The user's attention is not on one place when they 
+                            open Craigslist's site. It makes it stressful to use 
+                            as a first-time user to and difficult to understand 
+                            how to navigate through. Also, the limited variety of 
+                            colors utilized on the site amplifies this effect.
+                        </p>
+                        <ul>
+                            <li><span class="bold">Heuristic(s) violated: </span>Aesthetics 
+                            and minimalist design</li>
+                            <li><span class="bold">Severity rating: </span>3</li>
+                        </ul>
+                        <p>Minimal capitalization is used on the entire site. Capitalization 
+                            is used to indicate proper nouns, categories or sections, etc in 
+                            most interfaces. Since Craigslist does not follow these conventions, 
+                            items seem to blend together and it is hard to recognize what’s 
+                            most important.
+                        </p>
+                        <ul>
+                            <li><span class="bold">Heuristic(s) violated: </span>Match 
+                            between system and real world</li>
+                            <li><span class="bold">Severity rating: </span>2</li>
+                        </ul>
+                        <p>Limited styling is applied to the website, and it looks 
+                        outdated! Nobody is going to choose a site that looks like 
+                        this when there are alternatives which do the same thing, 
+                        but look modern & so much better.
+                        </p>
+                        <ul>
+                            <li><span class="bold">Heuristic(s) violated: </span>Aesthetics 
+                            and minimalist design</li>
+                            <li><span class="bold">Severity rating: </span>2</li>
+                        </ul>
+                        <div class="issue-image">
+                            <img src="images/si-422/ugly-page.png" alt="Ugly styling">
+                            <p>Figure 4: Ugly page</p>
+                        </div>
+                    </div>
+
+                    <div class="heuristic">   
+                        <h3>Usability issue #4: No visible login status</h3>
+                        <p>The website has a “my account” page, which indicates 
+                            that users should log in or create an account, 
+                            but the main page itself does not show if a user is 
+                            logged in or how to do so. If a user is actually 
+                            trying to use Craiglist (not just browse the site 
+                            like we are), it would be frustrating to do an 
+                            action (post, comment, etc – which I’m surprised 
+                            it even lets you do without being logged in) just 
+                            to realize afterwards that you did it anonymously 
+                            and not from your account.
+                        </p>
+                        <ul>
+                            <li><span class="bold">Heuristic(s) violated: </span>Visibility 
+                            of system status</li>
+                            <li><span class="bold">Severity rating: </span>3</li>
+                        </ul> 
+                        <div class="issue-image">
+                            <img src="images/si-422/my-account.png" alt="Login information area">
+                            <p>Figure 5: Hidden login status -- found under "my account"</p>
+                        </div>        
+                    </div>
+
+                    <div class="heuristic">   
+                        <h3>Usability issue #5: Inefficient reply mechanism</h3>
+                        <p>The “reply” button on a posting just leads to another 
+                            button (“show email”), which still doesn’t take you 
+                            to a page where you can send an email but rather gives 
+                            a link/address that emails should be sent to. When people 
+                            hit the “reply” button and are not immediately provided a 
+                            form to fill out which will submit their response, they 
+                            are 1) confused (because that’s how most reply buttons work) 
+                            and 2) irritated (because the reply process is so inefficient).
+
+                        </p>
+                        <ul>
+                            <li><span class="bold">Heuristic(s) violated: </span>Flexibility 
+                            and efficiency of use, Consistency and standards</li>
+                            <li><span class="bold">Severity rating: </span>3</li>
+                        </ul> 
+                        <div class="issue-image">
+                            <!-- <img src="" alt=""> -->
+                            <video controls name="Reply process">
+                                <source src="images/si-422/reply-process.mov">
+                              </video>
+                            <p>Figure 6: Reply process</p>
+                        </div>        
+                    </div>
+                    
+            </div>
+
+            <div class="proj-section">
+                <h2>Results Anaysis</h2>
+                <p>I would say that Craigslist’s strengths lie mostly in the recognition 
+                    rather than recall and help and documentation areas. One thing that’s 
+                    great about Craigslist is that it consistently shows not just the 
+                    user’s location, but the path of actions that they took to get to the 
+                    current page; for example, if I’m on the pets page, the top navigation 
+                    will say “ann arbor > community > pets”, aka showing the location, 
+                    category, and relevant subcategory. Another cool thing that Craigslist 
+                    does is remember what pages the user has already visited–as is common 
+                    in most browsers, it highlights visited pages (links) in purple instead 
+                    of the usual blue.
+                </p>
+                <p>Some weaknesses of Craigslist have to do with the visuals of the site. 
+                    The page is very plain/minimally styled, and almost all text is in all 
+                    lowercase (even when it shouldn’t be). This can be problematic because 
+                    users are used to proper nouns, category names, and beginnings of 
+                    sentences or list items being capitalized–this makes them stand out, 
+                    and is also the normal convention, so not being that way can be confusing 
+                    to new users. 
+                </p>
+            </div>
+
+            <div class="proj-section">
+              <h2>Next Steps</h2>
+              <p>If Craigslist were to implement this feedback and make substantial 
+                  design changes to their site, this is the order in which we'd 
+                  recommend:</p>
+              <ul class="takeaways">
+                <li>Page style</li>
+                <ul class="takeaways">
+                  <li>As it exists, the Craigslist site is not just visually unappealing, 
+                    but functionally confusing. We would suggest re-styling the page in 
+                    a more modern style, and using a greater variety of colors (or just different 
+                    ones than the browser default) to increase contrast between sections and 
+                    highlight different elements of the page. Additionally, it would be helpful 
+                    to follow proper capitalization conventions to make the comprehension process 
+                    more natural for users. I would say that changing the styling of the site 
+                    should be one of the top priorities when redesigning -- since the page looks 
+                    outdated and there are more functional and modern alternatives, it is very 
+                    easy for users to choose something like Facebook marketplace over Craigslist. 
+                  </li>
+                </ul>
+                <li>Memory limitations</li>
+                <ul class="takeaways">
+                  <li>Another high priority should be the website’s memory capabilities –- since 
+                      it often forgets the user’s location and has no ability to suggest actions 
+                      based on prior interactions (shortcuts), users might be frustrated having to 
+                      re-enter information each time they engage.
+                  </li>
+                </ul>
+                <li>Visibility of login status</li>
+                <ul class="takeaways">
+                  <li>The main/home page does not indicate if the 
+                    current user is logged in, or give any insight 
+                    on how to do so. If a user is trying to use Craiglist 
+                    to buy or sell products or services (not just browse 
+                    the site like we did), it would be take actions which 
+                    they later realize were not affiliated with their profile.
+                  </li>
+                </ul>
+              </ul>
+          </div>
+
+        </div>
+
+
+
+
+
+
+    </main>
+
+    <footer>
+      <div class="main-icons">
+        <a href="https://www.linkedin.com/in/lexi-fogel/"><img class="icon" width="20px" src="images/icons/linkedin.png" alt="Linkedin Logo"></a>
+        <a href="https://github.com/lexifogel"><img class="icon" width="20px" src="images/icons/github.png" alt="Github Logo"></a>
+      </div>
+        <p>Lexi Fogel &copy; 2022</p>
+	  </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+  
+  </html>
+  
