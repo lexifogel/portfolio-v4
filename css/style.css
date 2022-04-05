@@ -75,6 +75,23 @@ a {
     text-decoration: none;
 }
 
+/* embed {
+    width: 95%;
+} */
+
+/* #nav-viz {
+
+} */
+
+#nav-viz-embed {
+    display: none;
+}
+
+#nav-viz-button {
+    display: block;
+}
+/*  need to fix this on mobile *** ^^^  */
+
 .navbar-light .navbar-brand {
     color: #223A59;
     margin-left: .5em;
@@ -406,9 +423,14 @@ a.proj-button {
     width: 30%;
 }
 
-#khourabia {
+#khourabia-button {
     margin-top: 1em;
 }
+
+#khourabia-embed {
+    display: none;
+}
+
 
 #soups {
     width: 85%;
@@ -500,6 +522,20 @@ ol {
         margin-right: 1em;
     }
 
+    embed {
+        width: 65%;
+    }
+
+    #nav-viz-embed {
+        display: block;
+        width: 90%;
+        height: 32em;
+    }
+    
+    #nav-viz-button {
+        display: none;
+    }
+
     /* 320 Page */
     .work {
         display: flex;
@@ -518,10 +554,14 @@ ol {
         margin-right: 1em;
     }
 
-    #khourabia {
-        margin-right: 2em;
+    #khourabia-button {
+        display: none;
     }
     
+    #khourabia-embed {
+        margin-right: 2em;
+    }
+
     #soups {
         width: 40%;
     }
@@ -530,7 +570,7 @@ ol {
         width: 25%;
     }
     
-    #khourabia, #soups, #damascus {
+    #khourabia-embed, #soups, #damascus {
         margin-left: 2em;
     }
 
