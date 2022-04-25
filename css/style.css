@@ -468,6 +468,18 @@ ol {
     width: 70%;
 }
 
+.testing-image {
+    margin: auto;
+    text-align: center;
+    width: 65%;
+}
+
+.testing-image p {
+    font-size: .75em;
+    /* text-align: center; */
+    margin-bottom: 2em;
+}
+
 
 
 /* fixing button issue on mobile (i hope) */
