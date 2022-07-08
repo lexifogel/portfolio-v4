@@ -236,6 +236,11 @@ footer {
     width: 30%;
 }
 
+/* SHRINK LOGO */
+.job #wayfair img {
+    width: 20%;
+}
+
 /* end work */
 
 /* Project page */
@@ -481,7 +486,7 @@ ol {
 }
 
 #team-za {
-    width: 40%;
+    width: 35%;
 }
 
 
